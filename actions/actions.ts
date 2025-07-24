@@ -70,7 +70,7 @@ export const createLandmarkAction = async (
   try {
     const user = await getAuthUser();
     const rawData = Object.fromEntries(formData);
-    const file = formData.get("image") as File;
+    const file = formData.get('image') as File;
 
     // Step 1 Validate Data
     const validatedFile = validateWithZod(imageSchema, { image: file });
